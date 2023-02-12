@@ -1,0 +1,28 @@
+/* Lumous effect CSS start */
+.bg{
+    background: url("./img/harryLumous.webp");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+  }
+  
+  :root{
+    cursor: url("./use160.cur"),auto;
+    --X:40vh;
+    --Y:45vw;
+  }
+  
+  :root:before{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: radial-gradient(circle 10vmax at var(--X) var(--Y),
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.7) 88%,
+    rgba(0,0,0,0.95) 100%
+    );
+    pointer-events: none;
+  }
+  /* Lumous Effect csss end */

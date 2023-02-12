@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <title>Lumous Effect</title>
+    <link rel="stylesheet" href="style_lumous.css">
+</head>
+<body>
+    <div class="lumous show-display">
+        <section class="bg">
+    
+        </section>
+    </div>
+    <script>
+        function move(event){
+            let X = event.clientX || event.touches[0].clientX;
+            let Y = event.clientY || event.touches[0].clientY;
+            document.documentElement.style.setProperty('--X' ,X +'px')
+            document.documentElement.style.setProperty('--Y' ,Y +'px')
+        }
+        document.addEventListener('mousemove', move);
+        document.addEventListener('touchpad', move);
+    </script>   
+</body>
+</html>
